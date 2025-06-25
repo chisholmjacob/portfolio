@@ -60,34 +60,16 @@ function showTab(tabId) {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
+  const scriptURL = '<SCRIPT URL>'
+  const form = document.forms['submit-to-google-sheet']
 
-    fetch("https://script.google.com/macros/s/AKfycbyjg_rrn9V1KDVNtfHWtl6cvEMafoBQE2SB_ik6M60NOMc2ICLHJhpcvig2-rYQjIqo/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(res => res.text())
-      .then(response => {
-        console.log("Server response:", response);
-        document.getElementById("response-message").textContent = "Message sent!";
-        form.reset();
-      })
-      .catch(err => {
-        console.error("Error occurred:", err);
-        document.getElementById("response-message").textContent = "Something went wrong.";
-      });
-  });
-});
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
 
