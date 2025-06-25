@@ -24,23 +24,23 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 <!-- Home Section -->
-    <div id="header">        
-      <div id="ripple-header">
-        <div class="container">
-          <div class="header-content">
-            <h1>Jacob Chisholm</h1>
-            <p>Computer Science Student @ UofSC</p>
-          </div>
+<div id="header">        
+  <div id="ripple-header">
+    <div class="container">
+      <div class="header-content">
+        <h1>Jacob Chisholm</h1>
+        <p>Computer Science Student @ UofSC</p>
       </div>
-    </div>
+  </div>
+</div>
 <!-- About Me Section -->
-<div id="about">
+<section id="about">
   <div class="container about-layout">
 
     <!-- Left Side -->
@@ -94,15 +94,14 @@
     </div>
 
   </div>
-</div>
+</section>
 <!-- Experience Section -->
 <section id="experience">
   <div class="toggle-tab">
     <button class="tab active" onclick="showTab('work')">Work</button>
     <button class="tab" onclick="showTab('education')">Education</button>
   </div>
-
-  <!-- Work Timeline -->
+<!-- Work Timeline -->
   <div class="tab-content active" id="work">
     <div class="timeline-stack">
       <div class="timeline-card top-card">
@@ -144,6 +143,16 @@
     </div>
   </div>  
 </section>
+<!-- Contact Section -->
+<section id="contact">
+
+
+
+
+
+
+
+</section>
 
 
 
@@ -157,61 +166,7 @@
 
 
 
-
-
-
-<script>
-  $(document).ready(function() {
-    $('#ripple-header').ripples({
-      resolution: 256,
-      dropRadius: 20,
-      perturbance: 0.03
-    });
-  });
-</script>
-
-
-<script>
-function rotateCarousel(className) {
-  let current = 0;
-  const images = document.querySelectorAll(`.${className}`);
-
-  setInterval(() => {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }, 3000);
-}
-
-rotateCarousel('carousel1');
-rotateCarousel('carousel2');
-</script>
-
-<script>
-  function showTab(tabId) {
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.classList.remove('active');
-    });
-
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-
-    const activeTabButton = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
-    if (activeTabButton) {
-      activeTabButton.classList.add('active');
-    }
-
-    const activeTabContent = document.getElementById(tabId);
-    if (activeTabContent) {
-      activeTabContent.classList.add('active');
-    }
-  }
-</script>
-
-
-
-
+<script src="script.js"></script>
 
 </body>
 </html>

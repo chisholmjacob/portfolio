@@ -228,7 +228,6 @@ nav ul li a:hover {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Toggle Tabs */
 .toggle-tab {
   display: flex;
   background-color: #0d0d0d;
@@ -240,12 +239,15 @@ nav ul li a:hover {
 }
 
 .tab {
-  padding: 10px 24px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
   border: none;
-  border-radius: 10px;
   background: transparent;
   color: #cbd5e1;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
