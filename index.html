@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Jacob Chisholm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        <div class="header-content">
+            <h1>Jacob Chisholm</h1>
+            <p>Computer Science Student @ UofSC</p>
+        </div>
+    </div>
+<!-- About Me Section -->
+<div id="about">
+  <div class="container about-layout">
+    
+    <!-- Left Side -->
+    <div class="about-left">
+      <h1>ABOUT ME!</h1>
+      <ul class="about-info">
+        <li>📍 Columbia, South Carolina</li>
+        <li>🎓 20 Years Old</li>
+        <li>💻 2nd year comp sci student</li>
+        <li>⌛ 4+ Years of Coding Experience</li>
+      </ul>
+      <p class="about-description">
+        As a passionate student developer studying at UofSC,<br>
+        I aim to blend problem-solving, design, and clean code <br>
+        into every project I build. Whether it's full-stack apps, web design,<br>
+        or automating tasks, I focus on creating intuitive and scalable user experiences.
+      </p>
+      <div class="button-group">
+        <a href="#contact" class="btn primary">Contact Me</a>
+        <a href="#resume" class="btn secondary">My Resume</a>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="about-right">
+        <div class="carousel-row">
+            <div class="carousel">
+                <img src="images/Me1.jpg" alt="Me1" class="carousel-image carousel1 active" />
+                <img src="images/Me2.jpg" alt="Me2" class="carousel-image carousel1" />
+                <img src="images/Me3.jpg" alt="Me3" class="carousel-image carousel1" />
+            </div>
+            <div class="carousel">
+                <img src="scenery/photo1.jpg" alt="Scenery1" class="carousel-image carousel2 active" />
+                <img src="scenery/photo2.jpg" alt="Scenery2" class="carousel-image carousel2" />
+                <img src="scenery/photo3.jpg" alt="Scenery3" class="carousel-image carousel2" />
+                <img src="scenery/photo4.jpg" alt="Scenery4" class="carousel-image carousel2" />
+                <img src="scenery/photo5.jpg" alt="Scenery5" class="carousel-image carousel2" />
+                <img src="scenery/photo6.jpg" alt="Scenery6" class="carousel-image carousel2" />
+            </div>
+        </div>
+
+      <div class="tech-grid">
+        <div class="tech-card"><img src="icons/java.png" alt="Java" /><p>Java</p></div>
+        <div class="tech-card"><img src="icons/Csharp.png" alt="C#" /><p>C#</p></div>
+        <div class="tech-card"><img src="icons/python.png" alt="Python" /><p>Python</p></div>
+        <div class="tech-card"><img src="icons/C++.png" alt="C++" /><p>C++</p></div>
+        <div class="tech-card"><img src="icons/html.png" alt="HTML" /><p>HTML</p></div>
+        <div class="tech-card"><img src="icons/css.png" alt="CSS" /><p>CSS</p></div>
+        <div class="tech-card"><img src="icons/Javascript.webp" alt="JavaScript" /><p>JavaScript</p></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<script>
+function rotateCarousel(className) {
+  let current = 0;
+  const images = document.querySelectorAll(`.${className}`);
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 3000);
+}
+
+rotateCarousel('carousel1');
+rotateCarousel('carousel2');
+</script>
+
+
+
+</body>
+</html>
