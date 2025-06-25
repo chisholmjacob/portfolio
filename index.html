@@ -17,30 +17,32 @@
     .jquery-ripples canvas {
       filter: contrast(800%);
     }
-  </style>
+    </style>
 </head>
 <body>
-    <div id="header">
+<!-- nav bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+<!-- Home Section -->
+    <div id="header">        
       <div id="ripple-header">
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        <div class="header-content">
+          <div class="header-content">
             <h1>Jacob Chisholm</h1>
             <p>Computer Science Student @ UofSC</p>
-        </div>
+          </div>
       </div>
     </div>
 <!-- About Me Section -->
 <div id="about">
   <div class="container about-layout">
-    
+
     <!-- Left Side -->
     <div class="about-left">
       <h1>ABOUT ME!</h1>
@@ -93,6 +95,56 @@
 
   </div>
 </div>
+<!-- Experience Section -->
+<section id="experience">
+  <div class="toggle-tab">
+    <button class="tab active" onclick="showTab('work')">Work</button>
+    <button class="tab" onclick="showTab('education')">Education</button>
+  </div>
+
+  <!-- Work Timeline -->
+  <div class="tab-content active" id="work">
+    <div class="timeline-stack">
+      <div class="timeline-card top-card">
+        <div class="timeline-icon">💻</div>
+        <div class="timeline-info">
+          <h3>Freelance Web Developer</h3>
+          <span>Apr 2024 - Aug 2024 • Remote</span>
+          <p>• Built responsive websites for small businesses<br>
+             • Specialized in HTML, CSS, and JavaScript</p>
+        </div>
+      </div>
+
+      <div class="timeline-card bottom-card">
+        <div class="timeline-icon">
+          <img src="icons/chisholmhvac.png" alt="Chisholm HVAC">
+        </div>
+        <div class="timeline-info">
+          <h3>Heating and Air Installer - Chisholm HVAC</h3>
+          <span>Jan 2023 - Apr 2024 • Taylors, South Carolina</span>
+          <p>• Assisted in residential/commercial HVAC installations<br>
+             • Managed inventory and supported service diagnostics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Education Timeline -->
+  <div class="tab-content" id="education">
+    <div class="timeline-stack">
+      <div class="timeline-card single-card">
+        <div class="timeline-icon">
+          <img src="icons/uofsc.webp" alt="uofsc image">
+        </div>
+        <div class="timeline-info">
+          <h3>University of South Carolina</h3>
+          <span>2023 - Present • BS in Computer Science</span>
+          <p>• 2nd-year CS student</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
 
 
 
@@ -134,6 +186,30 @@ function rotateCarousel(className) {
 rotateCarousel('carousel1');
 rotateCarousel('carousel2');
 </script>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+
+    const activeTabButton = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
+    if (activeTabButton) {
+      activeTabButton.classList.add('active');
+    }
+
+    const activeTabContent = document.getElementById(tabId);
+    if (activeTabContent) {
+      activeTabContent.classList.add('active');
+    }
+  }
+</script>
+
+
 
 
 
