@@ -52,7 +52,7 @@ nav ul li a:hover {
 }
 
 .header-content {
-    margin-top: 50%;
+    margin-top: 21%;
     font-size: 30px;
 }
 
@@ -60,9 +60,15 @@ nav ul li a:hover {
     font-size: 60px;
     margin-top: 20px;
 }
+
+.header-content p {
+    font-size: 30px;
+    margin-bottom: 21%;
+}
+
 /* About Me Section */
 #about {
-    background-color: #0d0d0d;
+    background-color: #090909;
     color: #ffffff;
     padding: 60px 20px;
     font-family: 'Segoe UI', sans-serif;
@@ -134,7 +140,7 @@ nav ul li a:hover {
 
 .tech-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 20px rgba(15, 152, 162);
+    box-shadow: 0 4px 20px #0f98a2;
 }
 
 .tech-card img {

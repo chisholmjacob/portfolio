@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio - Jacob Chisholm</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Three.js is required for Vanta -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<!-- Vanta Waves effect -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 <body>
+  <div id="vanta-bg">
     <div id="header">
         <div class="container">
             <nav>
@@ -22,6 +27,7 @@
             <p>Computer Science Student @ UofSC</p>
         </div>
     </div>
+  </div>
 <!-- About Me Section -->
 <div id="about">
   <div class="container about-layout">
@@ -80,6 +86,35 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+VANTA.WAVES({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x0f98a2,       // Customize the wave color
+  shininess: 50.00,
+  waveHeight: 20.00,
+  waveSpeed: 0.75,
+  zoom: 1.2
+});
+</script>
 
 
 <script>
