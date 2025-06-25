@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio - Jacob Chisholm</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Three.js is required for Vanta -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<!-- Vanta Waves effect -->
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+    <style>
+    #ripples-header {
+      position: relative;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+    }
+    .jquery-ripples canvas {
+      filter: contrast(800%);
+    }
+  </style>
 </head>
 <body>
-  <div id="vanta-bg">
     <div id="header">
+      <div id="ripple-header">
         <div class="container">
             <nav>
                 <ul>
@@ -26,8 +35,8 @@
             <h1>Jacob Chisholm</h1>
             <p>Computer Science Student @ UofSC</p>
         </div>
+      </div>
     </div>
-  </div>
 <!-- About Me Section -->
 <div id="about">
   <div class="container about-layout">
@@ -100,20 +109,13 @@
 
 
 <script>
-VANTA.WAVES({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x0f98a2,       // Customize the wave color
-  shininess: 50.00,
-  waveHeight: 20.00,
-  waveSpeed: 0.75,
-  zoom: 1.2
-});
+  $(document).ready(function() {
+    $('#ripple-header').ripples({
+      resolution: 256,
+      dropRadius: 20,
+      perturbance: 0.03
+    });
+  });
 </script>
 
 
