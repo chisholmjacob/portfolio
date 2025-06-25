@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(res => res.text())
       .then(response => {
-        console.log("Server response:", response); // 👈 For testing
+        console.log("Server response:", response);
         document.getElementById("response-message").textContent = "Message sent!";
         form.reset();
       })
