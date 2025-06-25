@@ -26,7 +26,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 <!-- Home Section -->
@@ -144,15 +144,59 @@
   </div>  
 </section>
 <!-- Contact Section -->
-<section id="contact">
-  <form name="submit-to-google-sheet" id="contact-form">
-    <input type="text" name="name" placeholder="Name*" required />
-    <input type="email" name="email" placeholder="Email*" required />
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit">Send Message →</button>
-  </form>
-  <p id="response-message"></p>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <!-- LEFT: Contact Info -->
+    <div class="contact-info">
+      <div class="contact-cards">
+<!-- Discord Card -->
+        <a href="https://discord.com/users/268908478066589696" target="_blank" class="contact-card">
+          <div class="icon"><img src="icons/discord.webp" alt="Discord" /></div>
+          <div>
+            <h3>Discord</h3>
+            <p><strong>@chisholm</strong></p>
+            <p>Response time: Within 2 hours</p>
+          </div>
+        </a>
+
+<!-- Gmail Card -->
+        <a href="mailto:jchish9900@gmail.com" class="contact-card">
+          <div class="icon"><img src="icons/gmail.webp" alt="Gmail" /></div>
+          <div>
+            <h3>Email</h3>
+            <p><strong>jchish9900@gmail.com</strong></p>
+            <p>Response time: Within 1 day</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="social-links">
+        <h3>Connect</h3>
+        <a href="https://github.com/chisholmjacob" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon" />
+        </a>
+        <a href="https://linkedin.com/in/chisholmjacob" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon" />
+        </a>
+        <a href="https://instagram.com/chisholmjacob" target="_blank">
+          <img src="icons/instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Contact Form -->
+    <form name="submit-to-google-sheet" id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Name*" required />
+      <input type="email" name="email" placeholder="Email*" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send Message →</button>
+      <p id="response-message"></p>
+    </form>
+
+  </div>
 </section>
+
 
 
 
